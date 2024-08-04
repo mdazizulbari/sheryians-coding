@@ -2,8 +2,54 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: gilroy;
 }
 html, body{
     width: 100%;
     height: 100%;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+.part1{
+    display: flex;
+    align-items: center;
+}
+.part1 h3{
+    font-size: 17px;
+    border: 1.5px solid black;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+.part1 i{
+    font-size: 17px;
+    border: 1.5px solid black;
+    padding: 5px 8px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+.part2 h1{
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.part3 button{
+    padding: 7px 12px;
+    border-radius: 50px;
+    border: 1.5px solid black;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+#btn2{
+    border: 1.5px solid orangered;
+    background-color: orangered;
+    color: white;
 }
