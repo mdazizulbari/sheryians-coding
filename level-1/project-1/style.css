@@ -88,3 +88,16 @@ nav{
     transform: translate(-50%, -50%) rotate(-10deg);
 }
 
+/* bottom section */
+#btm-left{
+    position: absolute;
+    bottom: 5%;
+    left: 2.5%;
+    font-size: 17px;
+}
+#btm-right{
+    position: absolute;
+    bottom: 5%;
+    right: 2.5%;
+    font-size: 17px;
+}
