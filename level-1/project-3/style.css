@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif ;
+    font-family: sans-serif;
+    font-weight: 500;
 }
 html, body{
     height: 100%;
@@ -37,12 +38,10 @@ nav{
     padding: 40px 65px;
 }
 #heading h3{
-    font-weight: 500;
     font-size: 40px;
 }
 #heading h2{
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
-    font-weight: 500;
     font-size: 170px;
     padding-top: 40px;
     letter-spacing: -15px;
@@ -50,3 +49,75 @@ nav{
     line-height: 165px;
 }
 
+/* case-studies */
+#case-head{
+    display: flex;
+    padding: 20px 65px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+#case-head h3{
+    font-size: 26px;
+}
+#case-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+#line{
+    height: 2px;
+    width: 100px;
+    background: #000;
+}
+#projects{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 65px;
+    gap: 40px;
+}
+.project-elements{
+    width: 50%;
+}
+.element-img{
+    height: 770px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+#img1{
+    background-image: url(https://www.rankbyfocus.com/wp-content/uploads/2021/12/sketch-templates.png);
+}
+#img2{
+    background-image: url(https://i.ytimg.com/vi/0korQqBgJ_o/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCZ1dBhO_JK5Y3YpQhX8OL4MnsjPw);
+}
+.project-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    font-size: 18px;
+}
+.project-bottom h3{
+    font-size: 40px;
+    padding-bottom: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    letter-spacing: -1px;
+    word-spacing: 25px;
+    font-weight: 600;
+}
+.project-bottom i{
+    font-weight: 600;
+    font-size: 30px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background: white;
+    color: black;
+}
+.project-bottom i:hover{
+    color: white;
+    background: #000;
+}
