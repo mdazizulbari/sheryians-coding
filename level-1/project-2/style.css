@@ -1,12 +1,8 @@
-@font-face {
-    font-family: open;
-    src: url(/font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
-}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: open;
+    font-family: sans-serif;
 }
 html, body{
     height: 100%;
