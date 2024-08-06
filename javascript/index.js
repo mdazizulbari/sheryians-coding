@@ -56,3 +56,28 @@ var ans = (function(){
         // you can change the value of privateValue in console by ans.setter("your value")
     }
 })
+
+
+
+// prototype
+// javascript given helpful properties which are assinged to objects, which you can see in console and also use to do tasks
+
+
+
+// inharritance of objects
+var human = {
+    canFly: false,
+    canTalk: true,
+    canWalk: true,
+    haveEmotions: true,
+    haveFourLegs: false
+}
+var sheryiansStudents = {
+    canMakeAmazingWebsites: true,
+    canMakeAmazingAnnimations: true
+}
+sheryiansStudents.__proto__ = human
+// now sheryansStudents object also have the values of human
+
+
+
