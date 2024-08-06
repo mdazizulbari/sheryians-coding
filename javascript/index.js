@@ -102,7 +102,7 @@ var obj = {
         console.log(this)
     }
 }
-someMethod()
+// someMethod()
 // gives "object obj" "it's the object name
 // in any method "this" always refers it's parent object
 
@@ -117,3 +117,24 @@ var buttonUse = document.querySelector(`#buttonUse`)
 buttonUse.addEventListener(`click`, function(){
     this.style.color = "red"
 })
+
+
+
+
+// call, apply, bind
+// if you have one function and one object, and you want to execute the function but you want ot change the default value of "this" from "window" to point towads the object, use call
+function ef(value1, value2, value3){
+    console.log(this, value1, value2, value3)
+}
+var obj = {
+    name: "bari",
+    age: 18
+}
+ef.call(obj, 1, 2, 3)
+// apply and call are same, but apply only takes two parameters or values, so if you want to put more than two values in the () you have to use array[]
+ef.apply(obj, [1, 2, 3])
+// bind, binds the function and obj but dosen't show you, so you have to save it in a varriable
+var bindedFunction = ef.bind(obj)
+bindedFunction(1,2,3)
+
+
