@@ -81,3 +81,39 @@ sheryiansStudents.__proto__ = human
 
 
 
+// "this" keyword
+// it's value is different in different places or contexts
+// if anything is out of {} it's in global scope, if something is inside {} it's in local scope
+// in global scope,
+console.log(this) 
+// will give "window"
+
+// in function scope,
+function cd(){
+    console.log(this)
+}
+// will give "window"
+
+// function which is inside of object is called method
+// in method scope,
+var obj = {
+    name: "bari",
+    someMethod: function(){
+        console.log(this)
+    }
+}
+someMethod()
+// gives "object obj" "it's the object name
+// in any method "this" always refers it's parent object
+
+// in eventListener
+var button = document.querySelector(`button`)
+button.addEventListener(`click`, function(){
+    console.log(this)
+})
+// gives the button
+// you can use it like this,
+var buttonUse = document.querySelector(`#buttonUse`)
+buttonUse.addEventListener(`click`, function(){
+    this.style.color = "red"
+})
