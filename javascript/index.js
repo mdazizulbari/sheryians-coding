@@ -138,3 +138,28 @@ var bindedFunction = ef.bind(obj)
 bindedFunction(1,2,3)
 
 
+
+// pure and impure functions:
+// pure functions will only be in two cases,
+// 1. always returns the same output for same input
+// 2. will never change or update the value of global variable
+function gh(a,b){
+    return a*b
+}
+var ans1 = gh(1,2)
+var ans2 = gh(1,2)
+// this accpects both cases, so it's a pure function
+var ij = 12
+function gh(c,d){
+    ij = 24
+    return c*d
+}
+var ans3 = gh(1,2)
+var ans4 = gh(1,2)
+// this dosen't accpect 2nd law
+function km(value10){
+    return Math.random()*value10
+}
+var ans5 = km(2)
+var ans6 = km(2)
+// this dosen't accpet 1st law
