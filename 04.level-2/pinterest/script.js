@@ -52,3 +52,30 @@ function handleSearchFunctionality(){
 
 handleSearchFunctionality();
 showTheCards();
+
+
+
+
+
+//my code starts from here
+
+// js dom mannupulation
+// 1.selection
+var home = document.querySelector('#home')
+
+// 2.css chanege
+// home.style.color = 'red'
+
+// 3.heml change
+// home.innerHTML = "<i>It's Home</i>"
+
+// 4.change text
+// home.textContent = "At Home"
+
+// 5.adding listeners
+home.addEventListener('mouseenter', function(){
+    home.style.color = 'red'
+})
+home.addEventListener('mouseleave', function(){
+    home.style.color = 'black'
+})
