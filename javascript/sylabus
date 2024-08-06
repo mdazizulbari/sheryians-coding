@@ -1,0 +1,30 @@
+-word vs keyword
+-var const let
+--the difference
+--window object
+--browser context api
+--stack
+--heap memory
+--execution context
+--lexical environment
+-hosting
+-types in js
+--how to copy reference vales
+-conditionals
+-if else else-ig
+--truthy vs falsy
+-loops
+-for while
+--forEach forin do-while
+-functions
+--callback functions
+-params, arguments
+-arrays
+-push pop shift unshift
+--how arrays are made behind the scenes
+--why we can make negative indexes arrays
+--practice questions and scenaros
+-objects
+-props vs methods
+-updating object props
+-how to delete object props
