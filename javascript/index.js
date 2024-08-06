@@ -38,3 +38,21 @@ new ab()
 //     age: 12
 // }
 // this happens
+
+
+
+// iife stands for immediatly invocked function expression
+// the way of exeucating a function immediatly so that we can make a private varriable, which is hard to access
+var ans = (function(){
+    var privateValue = 12
+    return{
+        getter: function(){
+            console.log(privateValue)
+        },
+        // gets the value to show you in console by ans.getter()
+        setter: function(value){
+            privateValue = value
+        }
+        // you can change the value of privateValue in console by ans.setter("your value")
+    }
+})
