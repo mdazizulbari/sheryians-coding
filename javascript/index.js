@@ -25,3 +25,16 @@ function makeCircularButton(color){
 }
 var redBtn = new makeCircularButton(`red`)
 var blueBtn = new makeCircularButton(`blue`)
+
+
+
+// new keyword
+// new always creates a blank obj for the cunstructor function that is being called
+function ab(){
+    this.age = 12
+}
+new ab()
+// {
+//     age: 12
+// }
+// this happens
