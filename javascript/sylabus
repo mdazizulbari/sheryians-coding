@@ -35,4 +35,5 @@
 ---prototype
 ---prototypl inheritance
 ---this call apply bind
----pure functions
+---pure and impure functions
+---closures
