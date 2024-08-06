@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="bg-red-500 flex gap-10">
+<body class="h-screen w-screen font-sans text-white bg-hero-background">
+    <!-- <nav class="bg-red-500 flex gap-10">
         <h1 class="bg-white">Home</h1>
         <h1 class="bg-white">Home</h1>
         <h1 class="bg-white">Home</h1>
@@ -24,6 +27,26 @@
         <h1>idk</h1>
         <h1>idk</h1>
         <h1>idk</h1>
-    </div>
+    </div> -->
+
+
+    <nav class="px-20 py-4 flex justify-between">
+        <!-- left side -->
+        <div class="flex gap-2.5 items-center">
+            <img class="w-6" src="https://ik.imagekit.io/sheryians/Sheryians_logo_EzwgcppnD" alt="">
+            <h2>Sheryians coding school</h2>
+        </div>
+        <!-- right side -->
+        <div class="flex gap-20 items-center">
+            <h4>Home</h4>
+            <h4>Courses</h4>
+            <h4>Re-imagine</h4>
+            <h4>Classroom</h4>
+            <i class="text-2xl ri-notification-3-fill" class=""></i>
+            <div class="accLogo w-10 h-10 bg-green-600 rounded-full flex justify-center items-center">
+                <h4>M</h4>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>
