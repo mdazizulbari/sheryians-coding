@@ -73,3 +73,21 @@ play.addEventListener('click', function(){
         flag = 0
     }
 })
+forward.addEventListener('click', function(){
+    if(selectedSong < arr.length - 1){
+        selectedSong++
+        songToHTML()
+        audio.play()
+    } else{
+        forward.style.opacity = 0.4
+    }
+})
+backward.addEventListener('click', function(){
+    if(selectedSong > 0){
+        selectedSong--
+        songToHTML()
+        audio.play()
+    } else{
+        backward.style.opacity = 0.4
+    }
+})
