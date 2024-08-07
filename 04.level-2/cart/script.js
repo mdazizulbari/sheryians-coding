@@ -42,9 +42,10 @@ var popular = [
         image: "https://fdn2.gsmarena.com/vv/bigpic/realme-11-pro.jpg"
     }
 ]
+var cart = []
 function addProduct(){
     var clutter = ""
-    products.forEach(function(product){
+    products.forEach(function(product, index){
         clutter += `<div class="product w-fit rounded-xl p-2 bg-white">
                     <div class="image w-[14rem] h-[13rem] bg-zinc-200 rounded-xl overflow-hidden">
                         <img class="w-full h-full object-contain bg-white" src="${product.image}">
@@ -56,21 +57,19 @@ function addProduct(){
                                 <h3 class="font-semibold opacity-20">${product.headline}</h3>
                                 <h4 class="font-semibold mt-2">$${product.price}</h4>
                             </div>
-                            <button class="w-10 h-10 rounded-full shader text-yellow-400"><i
-                                    class="ri-add-line"></i></button>
+                            <button class="w-10 h-10 rounded-full shader text-yellow-400"><h5 data-index="${index}" class="add text-2xl font-extrabold">+</h5></button>
                         </div>
                     </div>
                 </div>`
     })
     document.querySelector(".products").innerHTML = clutter
 }
-
 function addPopularProduct(){
-    var clutter2 = ""
+    var clutter = ""
     popular.forEach(function(product){
-        clutter2 += `<div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
-                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
-                        <img class="w-full h-full object-cover"
+        clutter += `<div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
+                    <div class="w-20 h-20 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
+                        <img class="w-full h-full object-contain"
                             src="${product.image}"
                             alt="">
                     </div>
@@ -81,8 +80,38 @@ function addPopularProduct(){
                     </div>
                 </div>`
     })
-    document.querySelector(".populars").innerHTML = clutter2
+    document.querySelector(".populars").innerHTML = clutter
+}
+function addToCart(){
+    document.querySelector(".products")
+    .addEventListener("click", function(details){
+        if(details.target.classList.contains('add')){
+            // console.log(details.target.dataset)
+            cart.push(products[details.target.dataset.index])
+        }
+    })
+}
+function showCart(){
+    document.querySelector('.carticon')
+    .addEventListener('click', function(){
+        document.querySelector('.cartexpnd').style.display = 'block'
+        var clutter = ""
+        cart.forEach(function(product, index){
+            clutter += `<div class="flex gap-2 bg-white p-2 rounded-lg">
+                    <div class="w-10 h-10 flex-shrink-0 rounded-lg overflow-hidden">
+                        <img class="w-full h-full object-contain" src="${product.image}"/>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">${product.name}</h3>
+                        <h5 class="text-sm font-semibold opacity-80">$${product.price}</h5>
+                    </div>
+                </div>`
+        })
+        document.querySelector('.cartexpnd').innerHTML = clutter
+    })
 }
 
 addProduct()
 addPopularProduct()
+addToCart()
+showCart()
