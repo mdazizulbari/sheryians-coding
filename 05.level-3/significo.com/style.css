@@ -4,13 +4,15 @@
     --salmon: #EF9D71;
     --darkSalmon: #422B1F;
 }
-
 *{
     font-weight: 600;
 }
-
 *::selection{
     background-color: var(--salmon);
+}
+
+.videoDiv{
+    clip-path: circle(var(--clip) at 50% 50%);
 }
 
 body[theme="black"]{
