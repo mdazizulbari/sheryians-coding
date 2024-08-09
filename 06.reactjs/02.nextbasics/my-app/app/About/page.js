@@ -1,11 +1,4 @@
-import Header from "@/Components/Header";
-
 const about = () => {
-  return (
-    <div>
-      <Header />
-      about
-    </div>
-  );
+  return <div>about</div>;
 };
 export default about;
