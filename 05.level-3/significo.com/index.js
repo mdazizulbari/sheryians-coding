@@ -85,9 +85,22 @@ function reviewsAnnimation(){
         ease: Power4
     })
 }
-
+function capsuleAnnimation(){
+    gsap.to('.capsule:nth-child(2)', {
+        scrollTrigger:{
+            trigger: '.capsules',
+            start: "top 70%",
+            end: "bottom bottom",
+            // markers: true,
+            scrub: 1,
+        },
+        y: 0,
+        ease: Power4
+    })
+}
 
 homeAnnimation()
 sliderAnnimation()
 teamAnnimation()
 // reviewsAnnimation()
+capsuleAnnimation()
