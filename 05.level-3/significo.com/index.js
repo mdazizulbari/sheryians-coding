@@ -63,7 +63,31 @@ function teamAnnimation(){
         })
     })
 }
+function reviewsAnnimation(){
+    var clutter = ""
+    document.querySelector('.paragraph-text')
+    .textContent.split('').forEach(function(element){
+        if(element === ' '){clutter += `<span>&nbsp;</span>`}
+        clutter += `<span>${element}</span>`
+    })
+    document.querySelector('.paragraph-text').innerHTML = clutter
+    
+    gsap.set('.paragraph-text span', {opacity: .1})
+    gsap.to(".paragraph-text span", {
+        scrollTrigger:{
+            trigger: '.para',
+            start: "top 60%",
+            end: "bottom 90%",
+            scrub: 0.2,
+        },
+        opacity: 1,
+        stagger: 0.03,
+        ease: Power4
+    })
+}
+
 
 homeAnnimation()
 sliderAnnimation()
 teamAnnimation()
+// reviewsAnnimation()
