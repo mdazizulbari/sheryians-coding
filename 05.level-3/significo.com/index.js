@@ -44,6 +44,26 @@ function sliderAnnimation(){
         ease: Power4
     })    
 }
+function teamAnnimation(){
+    document.querySelectorAll(".list-element").forEach(function(element){
+        element.addEventListener('mousemove', function(details){
+            gsap.to(this.querySelector('.picture'), {
+                opacity: 1,
+                x: gsap.utils.mapRange(0, window.innerWidth, -200, 200, details.clientX),
+                ease: Power4,
+                duration: .5
+            })
+        })
+        element.addEventListener('mouseleave', function(details){
+            gsap.to(this.querySelector('.picture'), {
+                opacity: 0,
+                ease: Power4,
+                duration: .5
+            })
+        })
+    })
+}
 
 homeAnnimation()
 sliderAnnimation()
+teamAnnimation()
