@@ -4,7 +4,7 @@ import Header from "@/Components/Header";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Header/>
+      {/* <Header/> */}
       <body>{children}</body>
     </html>
   );
