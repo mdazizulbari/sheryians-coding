@@ -75,9 +75,10 @@ function reviewsAnnimation(){
     gsap.set('.paragraph-text span', {opacity: .1})
     gsap.to(".paragraph-text span", {
         scrollTrigger:{
-            trigger: '.para',
+            trigger: '.reviews',
             start: "top 60%",
             end: "bottom 90%",
+            // markers: true,
             scrub: 0.2,
         },
         opacity: 1,
@@ -98,9 +99,26 @@ function capsuleAnnimation(){
         ease: Power4
     })
 }
+function bodyColorChange(){
+    document.querySelectorAll('.section').forEach(function(element){
+        ScrollTrigger.create({
+            trigger: element,
+            start: "top 50%",
+            end: "bottom 50%",
+            // markers: true,
+            onEnter: function(){
+                document.body.setAttribute('theme', element.dataset.color)
+            },
+            onEnterBack: function(){
+                document.body.setAttribute('theme', element.dataset.color)
+            }
+        })
+    })
+}
 
+bodyColorChange()
 homeAnnimation()
 sliderAnnimation()
 teamAnnimation()
-// reviewsAnnimation()
+reviewsAnnimation()
 capsuleAnnimation()
