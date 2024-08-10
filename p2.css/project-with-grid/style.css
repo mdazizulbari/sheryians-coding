@@ -12,5 +12,30 @@ body, html{
 main{
     width: 100%;
     height: 100%;
-    
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-columns: 25% 25% 50%;
+}
+#left-top-right{
+    background: green;
+}
+#left-top-left{
+    background: yellow;
+}
+#left-right{
+    background: blue;
+}
+#left-center{
+    background: red;
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+#left-bottom{
+    grid-column: 1 / 3;
+    background: cyan;
+}
+#right{
+    background: purple;
+    grid-column: 3;
+    grid-row: 1 / 4;
 }
