@@ -18,9 +18,20 @@ display{
     inlineBlock - come and also change width, height
 }
 position
-flex
-pseudo-elements
-pseudo-classes
+flex{x-axis=main, y-axis=cross}
+pseudo-elements{
+    ::before
+    ::after
+    ::first-line
+    ::first-letter
+    ::selection
+}
+pseudo-classes{
+    :hover
+    :active
+    :focus
+    :nth-child(n)
+}
 
 annimation
 media queries
