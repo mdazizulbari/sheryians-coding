@@ -1,0 +1,26 @@
+width and height
+color and bg color
+units(
+    px{fixed} %{parent's value} vw{viewport} vh 
+    em{parent font size} rem{root/html font size}
+)
+max-width and max-height - can't go more than that
+font-family
+font-size
+ling-height
+text-aling
+padding
+margin
+border
+display{
+    block - no one can come in side
+    inline - come if there is space (can't change width, height)
+    inlineBlock - come and also change width, height
+}
+position
+flex
+pseudo-elements
+pseudo-classes
+
+annimation
+media queries
