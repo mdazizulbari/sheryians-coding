@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+body,
+html,
+main {
+  width: 100%;
+  height: 100%;
+  font-weight: 450;
+}
+
+#nav1 {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+#circles {
+  display: flex;
+}
+#circles div {
+  background: #000;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 5rem;
+}
+#menu {
+  display: flex;
+  gap: 2.5rem;
+}
+#menu p:nth-child(2) {
+  margin-left: -1.8rem;
+  color: gray;
+}
+
+#nav2 {
+  display: flex;
+  align-items: center;
+  height: 1.8rem;
+  gap: 5.5rem;
+  padding: 0rem 1.5rem;
+  text-transform: uppercase;
+}
+
+section {
+  width: 100%;
+  height: calc(100% - 5.8rem);
+}
+#section-text {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+#section-text::-webkit-scrollbar{
+    background-color: transparent;
+    height: .4rem;
+}
+#section-text::-webkit-scrollbar-thumb{
+    background-color: orangered;
+    border-radius: 3rem;
+}
+
+.element {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+}
+.element>h2{
+  font-family: dosis;
+  font-size: 8rem;
+  font-weight: 100;
+}
+
+#image-section{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    overflow-x: auto;
+}
+#image-section img{
+    object-fit: cover;
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+}
+#image-section::-webkit-scrollbar{
+    display: none;
+}
+
+
+@media (max-width:600px) {
+  
+}
