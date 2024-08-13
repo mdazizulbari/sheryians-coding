@@ -36,6 +36,9 @@ main {
   margin-left: -1.8rem;
   color: gray;
 }
+#menu p:nth-child(7){
+  display: none;
+}
 
 #nav2 {
   display: flex;
@@ -57,46 +60,63 @@ section {
   flex-wrap: nowrap;
   overflow-x: auto;
 }
-#section-text::-webkit-scrollbar{
-    background-color: transparent;
-    height: .4rem;
+#section-text::-webkit-scrollbar {
+  background-color: transparent;
+  height: 0.4rem;
 }
-#section-text::-webkit-scrollbar-thumb{
-    background-color: orangered;
-    border-radius: 3rem;
+#section-text::-webkit-scrollbar-thumb {
+  background-color: orangered;
+  border-radius: 3rem;
 }
 
 .element {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
 }
-.element>h2{
+.element > h2 {
   font-family: dosis;
   font-size: 8rem;
   font-weight: 100;
 }
 
-#image-section{
-    width: 100%;
-    height: 60%;
-    display: flex;
-    overflow-x: auto;
+#image-section {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  overflow-x: auto;
 }
-#image-section img{
-    object-fit: cover;
-    flex-shrink: 0;
-    height: 100%;
-    width: 100%;
+#image-section img {
+  object-fit: cover;
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
 }
-#image-section::-webkit-scrollbar{
+#image-section::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #nav2 {
+    gap: 1rem;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }  
+  #menu p:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(7)) {
     display: none;
-}
-
-
-@media (max-width:600px) {
-  
+  }
+  #menu p:nth-child(7){
+    display: initial;
+    margin-left: -1rem;
+    font-weight: 600;
+  }
+  .element {
+    width: 85%;
+  }
+  .element > h2 {
+    font-size: 5rem;
+  }
 }
