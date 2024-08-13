@@ -1,0 +1,66 @@
+*,html, body{
+    height: fit-content;
+}
+
+div{
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem;
+    position: relative;
+    animation-name: annimate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+div:nth-child(1){
+    background: #000;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+div:nth-child(2){
+    background: green;
+    animation-direction: alternate;
+}
+div:nth-child(3){
+    background: red;
+    animation-direction:alternate-reverse;
+}
+div:nth-child(4){
+    background: blue;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+div:nth-child(5){
+    background: cyan;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+}
+div:nth-child(6){
+    background: crimson;
+    animation-timing-function: ease-in-out;
+}
+div:nth-child(7){
+    background: brown;
+}
+div:nth-child(8){
+    background: bisque;
+    animation-iteration-count: 2;
+}
+div:nth-child(9){
+    background: orange;
+    animation-iteration-count: 3;
+}
+div:nth-child(10){
+    background: darkgreen;
+    animation-iteration-count: 4;
+}
+
+
+
+@keyframes annimate {
+    from{
+        left: 0;
+    }
+    to{
+        left: 90%;
+    }
+}
