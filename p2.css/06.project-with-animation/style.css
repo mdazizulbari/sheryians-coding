@@ -57,7 +57,7 @@ nav p:nth-child(5){
 }
 
 
-
+/* hero section------------------------------------- */
 #hero{
   height: 80%;
   width: 100%;
@@ -111,4 +111,105 @@ nav p:nth-child(5){
 #overlay-bottom img{
   width: 3.5rem;
   height: 3rem;
+}
+
+
+
+/* scroll section---------------------------------------------- */
+#scroll{
+  height: 40%;
+  width: 100%;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#scroll img{
+  height: 100%;
+  width: 15.5%;
+  margin: .5rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+#image-container{
+  height: 100%;
+  width: 110%;
+  display: inline-block;
+  padding: 2rem;
+  animation: scroll-animation 10s linear infinite alternate;
+}
+@keyframes scroll-animation {
+  from{
+    transform: translate(0);
+  }
+  to{
+    transform: translate(-50%);
+  }
+}
+
+
+
+/* letter filter section----------------------- */
+#letter-filter{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: .2rem solid black;
+  border-right: none;
+  border-left: none;
+}
+#letter-filter h6{
+  font-style: italic;
+  opacity: 50%;
+}
+#letter-filter h6:nth-child(1){
+  text-decoration: underline;
+  margin-right: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  opacity: 100%;
+}
+#letter-filter h6:not(:nth-child(1)){
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0.2rem .6rem;
+  border: .1rem solid white;
+  border-radius: 5rem;
+  transition: all ease .5s;
+}
+#letter-filter h6:hover:not(:nth-child(1)){
+  border: .1rem solid black;
+  cursor: pointer;
+  opacity: 100%;
+}
+#letter-filter h6:nth-child(2), /* A */
+#letter-filter h6:nth-child(3), /* B */
+#letter-filter h6:nth-child(4), /* C */
+#letter-filter h6:nth-child(5), /* D */
+#letter-filter h6:nth-child(6), /* E */
+#letter-filter h6:nth-child(7), /* F */
+#letter-filter h6:nth-child(11), /* K */
+#letter-filter h6:nth-child(12), /* L */
+#letter-filter h6:nth-child(13), /* M */
+#letter-filter h6:nth-child(15), /* O */
+#letter-filter h6:nth-child(16), /* P */
+#letter-filter h6:nth-child(18), /* R */
+#letter-filter h6:nth-child(19), /* S */
+#letter-filter h6:nth-child(20), /* T */
+#letter-filter h6:nth-child(22), /* V */
+#letter-filter h6:nth-child(23), /* W */
+#letter-filter h6:nth-child(24), /* X */
+#letter-filter h6:nth-child(25), /* Y */
+#letter-filter h6:nth-child(26) { /* Z */
+  opacity: 100%;
+}
+
+
+
+/* image detailes section---------------------------- */
+#image-detailes{
+ height: 60%; 
 }
