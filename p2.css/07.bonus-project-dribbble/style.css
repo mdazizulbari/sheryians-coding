@@ -53,12 +53,22 @@ nav>img{
     flex-wrap: nowrap; */
     white-space: nowrap;
     overflow-y: hidden;
-    overflow-x: auto;
+    overflow-x: hidden;
+}
+.bottom-container{
+    animation: scroller 20s linear infinite;
+    width: 100%;
+    height: 100%;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+@keyframes scroller {
+    from{transform: translateX(0);}
+    to{transform: translateX(calc(-50% - .5rem));}
 }
 .element{
     /* flex-shrink: 0; */
     display: inline-block;
-    margin-right: 0.5rem;
     height: 100%;
     width: 15rem;
     background: blue;
