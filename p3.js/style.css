@@ -1,41 +1,104 @@
-img{
-    width: 10rem;
-    height: 10rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
 }
-#head{
+body,
+html,
+main {
+  width: 100%;
+  height: 100%;
+  font-size: 1.1vmax;
+}
+img {
+  width: 10rem;
+  height: 10rem;
+}
+#head {
+  display: flex;
+  gap: 1rem;
+}
+#head h4 {
+  padding: 1rem;
+  background: whitesmoke;
+  border: 0.1rem solid black;
+}
+#home,
+#about,
+#news {
+  display: none;
+}
+
+#taskRunning {
+  margin: 0 2rem;
+}
+#taskCompleted {
+  margin: 0 2rem;
+  display: none;
+}
+#progressBg {
+  margin: 0.5rem 2rem;
+  background: lightgreen;
+  border-radius: 5rem;
+  width: 15rem;
+  height: 0.5rem;
+  position: relative;
+}
+#progress {
+  background: green;
+  border-radius: 5rem;
+  width: 0%;
+  height: 0.5rem;
+  position: absolute;
+  transition: width 0.2s ease;
+}
+
+#search {
+  width: 100%;
+  height: 60%;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#container {
+  padding-top: 2rem;
+  width: 40rem;
+}
+#searchInput {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 0.2rem solid #dadada;
+  outline-color: royalblue;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+.searchImg {
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden;
+  border-radius: 50rem;
+}
+.searchImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.searchPersonName {
+}
+.person{
+    width: fit-content;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
 }
-#head h4{
-    padding: 1rem;
-    background: whitesmoke;
-    border: .1rem solid black;
-}
-#home, #about, #news{
-    display: none;
-}
-
-
-#taskRunning{
-    margin: 0 2rem;
-}
-#taskCompleted{
-    margin: 0 2rem;
-    display: none;
-}
-#progressBg{
-    margin: .5rem 2rem;
-    background: lightgreen;
-    border-radius: 5rem;
-    width: 15rem;
-    height: 0.5rem;
-position: relative;
-}
-#progress{
-    background: green;
-    border-radius: 5rem;
-    width: 0%;
-    height: 0.5rem;
-    position: absolute;
-    transition: width 0.2s ease;
+.people{
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
