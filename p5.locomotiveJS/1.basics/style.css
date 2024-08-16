@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-size: 1.1vmax;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+#sect1 {
+    background: rgb(0, 207, 207);
+}
+
+#sect2 {
+    background: rgb(0, 144, 144);
+}
+
+#sect3 {
+    background: rgb(1, 93, 93);
+}
