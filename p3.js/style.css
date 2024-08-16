@@ -87,8 +87,6 @@ img {
   object-fit: cover;
   object-position: top;
 }
-.searchPersonName {
-}
 .person {
   width: fit-content;
   display: flex;
