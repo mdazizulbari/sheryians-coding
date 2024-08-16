@@ -211,3 +211,14 @@ searchInput.addEventListener("input", function () {
   });
   peopleContainer.innerHTML = searchedPersons;
 });
+
+
+
+var characters = document.getElementById('characters')
+var characterInput = document.getElementById('characterInput')
+var characterCount = ''
+characterInput.addEventListener('input', function(){
+  characterCount = characterInput.value.length
+  characters.innerText = characterCount
+  console.log(characterCount)
+})

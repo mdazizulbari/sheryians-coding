@@ -102,3 +102,17 @@ img {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+
+
+#characterCounter{
+  padding: 5rem;
+}
+#characterInput{
+  width: 30rem;
+  height: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
