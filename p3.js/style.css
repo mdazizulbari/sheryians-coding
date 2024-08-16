@@ -89,26 +89,24 @@ img {
 }
 .searchPersonName {
 }
-.person{
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.person {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.people{
-    margin-top: 1rem;
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.people {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-
-
-#characterCounter{
+#characterCounter {
   padding: 5rem;
 }
-#characterInput{
+#characterInput {
   width: 30rem;
   height: 3rem;
   border-radius: 1rem;
