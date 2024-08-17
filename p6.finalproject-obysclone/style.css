@@ -104,7 +104,7 @@ h5 {
 
 /* hero section ------------------------------------------------------- */
 #hero {
-    height: 100vh;
+  height: 100vh;
   background: #151515;
 }
 #hero nav {
@@ -130,16 +130,6 @@ h5 {
   line-height: 6.5rem;
   text-transform: uppercase;
 }
-.heroText h2 {
-  border-bottom: 0.4rem solid white;
-  padding-bottom: 0.1rem;
-}
-.heroText h2:hover {
-  -webkit-text-stroke: 0.1rem white;
-  font-weight: 500;
-  border: transparent;
-  color: transparent;
-}
 .heroText {
   width: 70%;
   height: fit-content;
@@ -152,6 +142,29 @@ h5 {
 }
 .heroText:nth-child(2) {
   margin-top: 9rem;
+}
+#heroText1 {
+  position: relative;
+  overflow-x: visible;
+}
+#hero::before {
+  content: "01";
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 100;
+  font-family: "silk serif";
+  top: 30.5%;
+  left: 20%;
+}
+.heroText h2 {
+  border-bottom: 0.4rem solid white;
+  padding-bottom: 0.1rem;
+}
+.heroText h2:hover {
+  -webkit-text-stroke: 0.1rem white;
+  font-weight: 500;
+  border: transparent;
+  color: transparent;
 }
 
 /* video container -------------------------------------------------------------- */
@@ -224,6 +237,16 @@ h5 {
 #aboutContent h2 {
   font-size: 7rem;
   text-transform: uppercase;
+  position: relative;
+}
+#aboutSection h2::before {
+  content: "03";
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 100;
+  font-family: "silk serif";
+  top: 8%;
+  left: -12%;
 }
 #aboutContent > p {
   font-size: 2rem;
@@ -271,91 +294,92 @@ h5 {
   position: relative;
 }
 #workWith .element,
-#workWith .element2{
-white-space: nowrap;
-margin-bottom: .3rem;
-overflow-x: hidden;
+#workWith .element2 {
+  white-space: nowrap;
+  margin-bottom: 0.3rem;
+  overflow-x: hidden;
 }
 #workWith .element h2,
 #workWith .element h2 span,
 #workWith .element2 h2 span,
-#workWith .element2 h2{
-    font-size: 7rem;
-    -webkit-text-stroke: .1rem white;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: transparent;
-    display: inline-block;
-    margin-right: 1rem;
+#workWith .element2 h2 {
+  font-size: 7rem;
+  -webkit-text-stroke: 0.1rem white;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: transparent;
+  display: inline-block;
+  margin-right: 1rem;
 }
-#workWith .element h2{
-    animation: workWithAnimation 10s linear infinite;
+#workWith .element h2 {
+  animation: workWithAnimation 10s linear infinite;
 }
-#workWith .element2 h2{
-    transform: translateX(-100 - 1.25rem);
-    animation: workWithAnimation 10s linear infinite reverse;
+#workWith .element2 h2 {
+  transform: translateX(-100 - 1.25rem);
+  animation: workWithAnimation 10s linear infinite reverse;
 }
 @keyframes workWithAnimation {
-    from{
-        transform: translateX(0);
-    } to {
-        transform: translateX(calc(-100% - 1.25rem));
-        /* 4px of the default gap of inline-block, 4px = 0.25rem */
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1.25rem));
+    /* 4px of the default gap of inline-block, 4px = 0.25rem */
+  }
 }
 #workWith .element h2 span,
-#workWith .element2 h2 span{
-    font-family: "silk serif";
+#workWith .element2 h2 span {
+  font-family: "silk serif";
 }
 
 /* footer section ----------------------------------------------------------- */
-footer{
-    height: 80vh;
-    width: 100%;
-    position: relative;
-    padding-left: 28rem;
+footer {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  padding-left: 28rem;
 }
-footer h2{
-    font-size: 7rem;
-    position: relative;
-    text-transform: uppercase;
+footer h2 {
+  font-size: 7rem;
+  position: relative;
+  text-transform: uppercase;
 }
-footer h2::before{
-    content: "04";
-    position: absolute;
-    font-size: 3rem;
-    font-weight: 100;
-    font-family: "silk serif";
-    top: 8%;
-    left: -12%;
+footer h2::before {
+  content: "04";
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 100;
+  font-family: "silk serif";
+  top: 8%;
+  left: -12%;
 }
-.underline{
-    height: 0.2rem;
-    width: 100%;
-    background: white;
-    margin: 2rem 0;
+.underline {
+  height: 0.2rem;
+  width: 100%;
+  background: white;
+  margin: 2rem 0;
 }
-#footerContainer{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-right: 15rem;
-    padding-top: 4rem;
-    margin-bottom: 3rem;
+#footerContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 15rem;
+  padding-top: 4rem;
+  margin-bottom: 3rem;
 }
-#footerContainer h6{
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin: 0.2rem 0;
+#footerContainer h6 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0.2rem 0;
 }
-#footerContainer h5{
-    font-size: 0.9rem;
-    font-family: "plain light";
+#footerContainer h5 {
+  font-size: 0.9rem;
+  font-family: "plain light";
 }
-#footerBox{
-    width: 20%;
+#footerBox {
+  width: 20%;
 }
-footer>h6{
-    font-size: 1rem;
-    font-weight: 500;
+footer > h6 {
+  font-size: 1rem;
+  font-weight: 500;
 }
