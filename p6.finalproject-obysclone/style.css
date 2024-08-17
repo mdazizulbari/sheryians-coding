@@ -307,3 +307,41 @@ overflow-x: hidden;
 #workWith .element2 h2 span{
     font-family: "silk serif";
 }
+
+/* footer section ----------------------------------------------------------- */
+footer{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28rem;
+}
+footer h2{
+    font-size: 7rem;
+    text-transform: uppercase;
+}
+.underline{
+    height: 0.2rem;
+    width: 100%;
+    background: white;
+    margin: 2rem 0;
+}
+#footerContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15rem;
+    padding-top: 4rem;
+    margin-bottom: 3rem;
+}
+#footerContainer h6{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0.2rem 0;
+}
+#footerContainer h5{
+    font-size: 0.9rem;
+    font-family: "plain light";
+}
+#footerBox{
+    width: 20%;
+}
