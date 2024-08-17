@@ -273,10 +273,12 @@ h5 {
 #workWith .element,
 #workWith .element2{
 white-space: nowrap;
-margin-bottom: 1rem;
+margin-bottom: .3rem;
 overflow-x: hidden;
 }
 #workWith .element h2,
+#workWith .element h2 span,
+#workWith .element2 h2 span,
 #workWith .element2 h2{
     font-size: 7rem;
     -webkit-text-stroke: .1rem white;
@@ -300,4 +302,8 @@ overflow-x: hidden;
         transform: translateX(calc(-100% - 1.25rem));
         /* 4px of the default gap of inline-block, 4px = 0.25rem */
     }
+}
+#workWith .element h2 span,
+#workWith .element2 h2 span{
+    font-family: "silk serif";
 }
