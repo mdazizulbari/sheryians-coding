@@ -20,6 +20,16 @@ section {
   width: 100%;
 }
 
+#cursor{
+    height: 2.3rem;
+    width: 2.3rem;
+    position: fixed;
+    border-radius: 50%;
+    border: .15rem solid rgba(245, 245, 245, 0.661);
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
 /* loader section --------------------------------------------------------------- */
 #loader {
   height: 100%;
@@ -49,14 +59,13 @@ h5 {
   font-weight: 100;
   font-size: 3rem;
 }
-#line1-part1 h5{
-    width: 5rem;
-    text-align: right;
+#line1-part1 h5 {
+  width: 5rem;
+  text-align: right;
 }
 .line h2 {
   font-size: 6rem;
   text-transform: uppercase;
-  font-weight: 900;
 }
 .line h3 {
   font-size: 4.6rem;
@@ -66,32 +75,72 @@ h5 {
   opacity: 0;
 }
 @keyframes nowanimation {
-    0%{
-        font-family: "plain light";
-        -webkit-text-stroke: .1rem white;
-        color: white;
-        opacity: 1;
-    }
-38%{
-        font-family: "plain light";
-        -webkit-text-stroke: .1rem white;
-        color: white;
-        opacity: 0;
-    }
-70%{
+  0% {
+    font-family: "plain light";
+    -webkit-text-stroke: 0.1rem white;
+    color: white;
+    opacity: 1;
+  }
+  38% {
+    font-family: "plain light";
+    -webkit-text-stroke: 0.1rem white;
+    color: white;
+    opacity: 0;
+  }
+  70% {
     font-family: "silk serif";
-    -webkit-text-stroke: .1rem white;
+    -webkit-text-stroke: 0.1rem white;
     color: transparent;
     opacity: 1;
-}
-100%{
+  }
+  100% {
     font-family: "silk serif";
-    -webkit-text-stroke: .1rem white;
+    -webkit-text-stroke: 0.1rem white;
     color: transparent;
     opacity: 0;
-}
+  }
 }
 
+/* hero section ------------------------------------------------------- */
 #hero {
   background: #151515;
+}
+#hero nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 4.8rem;
+}
+#navRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+}
+#navRight p{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.heroText h1, h2, h3{
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    text-transform: uppercase;
+}
+.heroText h2:hover{
+    -webkit-text-stroke: .1rem white;
+    font-weight: 500;
+    color: transparent;
+}
+.heroText{
+    width: 70%;
+    height: fit-content;
+    overflow: hidden;
+    margin-left: 28%;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+.heroText:nth-child(2){
+    margin-top: 9rem;
 }
