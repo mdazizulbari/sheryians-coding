@@ -85,7 +85,7 @@ function loaderAnimation() {
     opacity: 0,
   })
   tl.from("#heroText1 h1, #heroText2 h1, #heroText3 h2, #heroText3 h3, #heroText4 h1",{
-    y: 120,
+    y: 140,
     stagger: .2,
   })
 }
@@ -101,6 +101,6 @@ function cursorAnimation() {
 }
 
 // function calls -------------------------------------------------------------------
-locomotiveWithGsap();
+// locomotiveWithGsap();
 cursorAnimation();
 loaderAnimation();
