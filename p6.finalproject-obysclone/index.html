@@ -13,10 +13,10 @@
       href="/p6.finalproject-obysclone/assects/favicon.ico"
       type="image/x-icon"
     />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    /> -->
+    />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -41,7 +41,7 @@
     </section>
     <main>
       <!-- hero section ----------------------------------------------- -->
-      <section id="hero">
+      <section data-scroll id="hero">
         <nav>
           <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
             <path
@@ -128,23 +128,22 @@
         </div>
       </section>
       <!-- video section -------------------------------------------------- -->
-      <section id="videoSection">
+      <section data-scroll data-scroll-speed="-2" id="videoSection">
         <div id="videoContainer">
           <div id="videoCursor">
             <i class="ri-play-fill"></i>
           </div>
           <img src="/p6.finalproject-obysclone/assects/video.jpg" alt="" />
           <video
-            autoplay
             muted
             loop
             src="/p6.finalproject-obysclone/assects/Obys-Showreel-2022.mp4"
           ></video>
         </div>
       </section>
-      <section id="projectSection"></section>
+      <section data-scroll id="projectSection"></section>
       <!-- about section ----------------------------------------------------- -->
-      <section id="aboutSection">
+      <section data-scroll id="aboutSection">
         <div id="aboutContent">
           <h2>About Obys</h2>
           <div class="underline"></div>
@@ -188,10 +187,11 @@
             </div>
           </div>
           <div class="underline"></div>
+          <h6 id="workWithText">We work with</h6>
         </div>
       </section>
       <!-- work with section ----------------------------------------------- -->
-       <section id="workWith">
+      <section data-scroll id="workWith">
         <div class="element">
           <h2><span>sport</span> — fasion — <span>technology</span> —</h2>
           <h2><span>sport</span> — fasion — <span>technology</span> —</h2>
@@ -208,33 +208,37 @@
           <h2>hotels — <span>music</span> — automotive —</h2>
           <h2>hotels — <span>music</span> — automotive —</h2>
         </div>
-       </section>
-       <!-- footer section ----------------------------------------------- -->
-        <footer>
-          <h2>Let's create</h2>
-          <div class="underline"></div>
-          <div id="footerContainer">
-            <div id="footerBox">
-              <h5>Socials</h5>
-              <h6>Dribbble</h6>
-              <h6>Behance</h6>
-              <h6>Instagram</h6>
-              <h6>Facbook</h6>
-              <h6>YouTube</h6>
-              <h6>Twitter</h6>
-            </div>
-            <div id="footerBox">
-              <h5>Address</h5>
-              <h6>Pushkinska 5 <br> 61057 Kharkiv, <br> Ukraine</h6>
-            </div>
-            <div id="footerBox">
-              <h5>Say Hi!</h5>
-              <h6>info@obys.agency</h6>
-            </div>
+      </section>
+      <!-- footer section ----------------------------------------------- -->
+      <footer data-scroll>
+        <h2>Let's create</h2>
+        <div class="underline"></div>
+        <div id="footerContainer">
+          <div id="footerBox">
+            <h5>Socials</h5>
+            <h6>Dribbble</h6>
+            <h6>Behance</h6>
+            <h6>Instagram</h6>
+            <h6>Facbook</h6>
+            <h6>YouTube</h6>
+            <h6>Twitter</h6>
           </div>
-            <div class="underline"></div>
-            <h6>Obys Agency &copy; 2023k</h6>
-        </footer>
+          <div id="footerBox">
+            <h5>Address</h5>
+            <h6>
+              Pushkinska 5 <br />
+              61057 Kharkiv, <br />
+              Ukraine
+            </h6>
+          </div>
+          <div id="footerBox">
+            <h5>Say Hi!</h5>
+            <h6>info@obys.agency</h6>
+          </div>
+        </div>
+        <div class="underline"></div>
+        <h6>Obys Agency &copy; 2023k</h6>
+      </footer>
     </main>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -252,7 +256,7 @@
       type="text/javascript"
       src="https://unpkg.com/sheryjs/dist/Shery.js"
     ></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
