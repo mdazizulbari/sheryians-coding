@@ -66,7 +66,7 @@ function secondSectionAnimation() {
       markers: true,
       start: "top 50%",
       end: "top -10%",
-      scrub: 2,
+      scrub: 1,
     },
   });
 }
