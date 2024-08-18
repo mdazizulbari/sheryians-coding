@@ -181,7 +181,7 @@ h5 {
   align-items: center;
   justify-content: center;
   z-index: 999;
-  background: #a75b00;
+  background: #ffa63d;
   border-radius: 50%;
   height: 8rem;
   width: 8rem;
@@ -237,7 +237,7 @@ h5 {
   top: 8%;
   left: -12%;
 }
-#imgChildContainer{
+#projectsContainer{
   padding: 2rem;
   gap: 2.5rem;
   position: relative;
@@ -257,6 +257,25 @@ h5 {
   height: 28rem;
   width: 18rem;
 }
+.imgContainer:nth-child(6){
+  margin-left: 5%;
+  margin-top: 3%;
+}
+.imgContainer:nth-child(5){
+  height: 30rem;
+  width: 22rem;
+  margin-top: 15%;
+}
+.imgContainer:nth-child(7){
+  height: 30rem;
+  width: 20rem;
+  margin-top: -8rem;
+}
+.imgContainer:nth-child(9){
+  width: 22rem;
+  margin-top: 5%;
+  margin-left: 6%;
+}
 .imgContainer img{
   height: 100%;
   width: 100%;
@@ -266,8 +285,10 @@ h5 {
 .projectCircle{
   width: 20rem;
   height: 20rem;
+  position: relative;
   border-radius: 50%;
   border: .2rem solid white;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,8 +297,44 @@ h5 {
   height: 30%;
 }
 .projectCircle:nth-child(3){
-  margin-top: 14% !important;
+  margin-top: 14%;
   margin-left: 10%;
+  /* nth-child only use the index of it's parent element */
+}
+.projectCircle:nth-child(4) svg{
+  rotate: -45deg;
+}
+.projectCircle:nth-child(8) svg{
+  rotate: -90deg;
+}
+.projectCircle:nth-child(8){
+  margin-top: 10%;
+  margin-left: 6%;
+}
+.insideCircle{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
+.insideCircle p{
+  font-size: 0.9rem;
+  color: #000;
+  width: 70%;
+  font-weight: 500;
+}
+.projectCircle:hover .insideCircle{
+  scale: 100%;
+  transition: ease .5s;
+  opacity: 1;
 }
 /* about section ---------------------------------------------------     */
 #aboutSection {
@@ -327,7 +384,7 @@ h5 {
   margin-left: 1rem;
 }
 #awardsContainer {
-  background: #093ea3;
+  background: #3f7df4;
   width: 33rem;
   padding: 3rem;
   position: relative;
