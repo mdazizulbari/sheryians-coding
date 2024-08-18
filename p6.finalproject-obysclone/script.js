@@ -71,6 +71,7 @@ function cursorAnimation() {
     gsap.to("#videoCursor", {
       left: "70%",
       y: "-15%",
+      // this axis thing is really fucked up, if i give one value in y the other flag animaiton y gets overwritten, if I give both top, none work well... after al lot of trial, idk even how this one is working perfectly...
     });
   });
   var flag = 0;
@@ -84,7 +85,7 @@ function cursorAnimation() {
       gsap.to("#videoCursor", {
         scale: 0.5,
       });
-      flag = 1
+      flag = 1;
     } else {
       video.pause();
       video.style.opacity = 0;
@@ -94,8 +95,36 @@ function cursorAnimation() {
       gsap.to("#videoCursor", {
         scale: 1,
       });
-      flag = 0
+      flag = 0;
     }
+  });
+  document.addEventListener("mousemove", function (detailes) {
+    gsap.to("#flag", {
+      left: detailes.x,
+      top: detailes.y,
+    });
+  });
+  var heroText3 = document.querySelector("#heroText3 h2");
+  heroText3.addEventListener("mouseenter", function () {
+    gsap.to("#flag", {
+      opacity: 1,
+    });
+  });
+  heroText3.addEventListener("mouseleave", function () {
+    gsap.to("#flag", {
+      opacity: 0,
+    });
+  });
+  var heroText3sec = document.querySelector("#heroText3sec");
+  heroText3sec.addEventListener("mouseenter", function () {
+    gsap.to("#flag", {
+      opacity: 1,
+    });
+  });
+  heroText3sec.addEventListener("mouseleave", function () {
+    gsap.to("#flag", {
+      opacity: 0,
+    });
   });
 }
 // ---------------------------------------------------------------------------------

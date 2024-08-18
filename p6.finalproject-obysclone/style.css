@@ -31,7 +31,7 @@ section {
   transform: translate(-50%, -50%);
   z-index: 9999999 !important;
 } */
-.mousefollower{
+.mousefollower {
   border: 1rem;
   background: white;
   scale: 2;
@@ -171,6 +171,14 @@ h5 {
   border: transparent;
   color: transparent;
 }
+#flag {
+  width: 12rem;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
 
 /* video container -------------------------------------------------------------- */
 #videoSection {
@@ -199,7 +207,7 @@ h5 {
   width: 66.5rem;
   position: relative;
   left: 26%;
-  background: url(/p6.finalproject-obysclone/assects/video.jpg);
+  background-image: url(/p6.finalproject-obysclone/assects/video.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -215,6 +223,7 @@ h5 {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 0;
 }
 
 /* project section -------------------------------------------------- */
@@ -247,7 +256,7 @@ h5 {
   top: 8%;
   left: -12%;
 }
-#projectsContainer{
+#projectsContainer {
   padding: 2rem;
   gap: 2.5rem;
   position: relative;
@@ -256,72 +265,72 @@ h5 {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.imgContainer{
+.imgContainer {
   height: 35rem;
   flex-shrink: 0;
   width: 28rem;
   position: relative;
   overflow: hidden;
 }
-.imgContainer:nth-child(1){
+.imgContainer:nth-child(1) {
   height: 28rem;
   width: 18rem;
 }
-.imgContainer:nth-child(6){
+.imgContainer:nth-child(6) {
   margin-left: 5%;
   margin-top: 3%;
 }
-.imgContainer:nth-child(5){
+.imgContainer:nth-child(5) {
   height: 30rem;
   width: 22rem;
   margin-top: 15%;
 }
-.imgContainer:nth-child(7){
+.imgContainer:nth-child(7) {
   height: 30rem;
   width: 20rem;
   margin-top: -8rem;
 }
-.imgContainer:nth-child(9){
+.imgContainer:nth-child(9) {
   width: 22rem;
   margin-top: 5%;
   margin-left: 6%;
 }
-.imgContainer img{
+.imgContainer img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
 }
-.projectCircle{
+.projectCircle {
   width: 20rem;
   height: 20rem;
   position: relative;
   border-radius: 50%;
-  border: .2rem solid white;
+  border: 0.2rem solid white;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.projectCircle svg{
+.projectCircle svg {
   height: 30%;
 }
-.projectCircle:nth-child(3){
+.projectCircle:nth-child(3) {
   margin-top: 14%;
   margin-left: 10%;
   /* nth-child only use the index of it's parent element */
 }
-.projectCircle:nth-child(4) svg{
+.projectCircle:nth-child(4) svg {
   rotate: -45deg;
 }
-.projectCircle:nth-child(8) svg{
+.projectCircle:nth-child(8) svg {
   rotate: -90deg;
 }
-.projectCircle:nth-child(8){
+.projectCircle:nth-child(8) {
   margin-top: 10%;
   margin-left: 6%;
 }
-.insideCircle{
+.insideCircle {
   height: 100%;
   width: 100%;
   display: flex;
@@ -335,15 +344,15 @@ h5 {
   opacity: 0;
   scale: 0;
 }
-.insideCircle p{
+.insideCircle p {
   font-size: 0.9rem;
   color: #000;
   width: 70%;
   font-weight: 500;
 }
-.projectCircle:hover .insideCircle{
+.projectCircle:hover .insideCircle {
   scale: 100%;
-  transition: ease .5s;
+  transition: ease 0.5s;
   opacity: 1;
 }
 /* about section ---------------------------------------------------     */
@@ -415,10 +424,10 @@ h5 {
 .awardElement p {
   width: 50%;
 }
-#workWithText{
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
+#workWithText {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 /* work with section -------------------------------------------------- */
@@ -518,7 +527,7 @@ footer > h6 {
   font-weight: 500;
 }
 /* shery js -------------------------------------------------------------- */
-._canvas_container{
+._canvas_container {
   z-index: 99999999 !important;
-pointer-events: none;
+  pointer-events: none;
 }
