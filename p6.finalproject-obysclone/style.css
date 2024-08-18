@@ -32,7 +32,7 @@ section {
   z-index: 9999999 !important;
 } */
 .mousefollower{
-  border: .3rem;
+  border: 1rem;
   background: white;
   scale: 2;
   mix-blend-mode: difference;
@@ -174,15 +174,16 @@ h5 {
 
 /* video container -------------------------------------------------------------- */
 #videoSection {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   position: relative;
-  padding-top: 17%;
+  padding-top: 15%;
+  margin-bottom: 10%;
 }
 #videoCursor {
   position: absolute;
-  right: 0;
-  top: -5rem;
+  left: 70%;
+  top: -15%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,18 +195,21 @@ h5 {
   font-size: 2rem;
 }
 #videoContainer {
-  height: 66%;
+  height: 70vh;
   width: 66.5rem;
   position: relative;
   left: 26%;
+  background: url(/p6.finalproject-obysclone/assects/video.jpg);
+  background-position: center;
+  background-size: cover;
 }
-#videoContainer img {
+/* #videoContainer img {
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
   top: 0;
-}
+} */
 #videoContainer video {
   height: 100%;
   width: 100%;
