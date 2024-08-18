@@ -37,8 +37,40 @@ function gsapWithLocomotivejs() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
+function secondSectionAnimation() {
+  // for only one element
+  // var h1Text = document.querySelector('#firsth1').textContent
+  // var splitedText = h1Text.split('')
+  // var clutter = ''
+  // splitedText.forEach(function(element){
+  // clutter += `<span>${element}</span>`
+  // })
+  // document.querySelector('#firsth1').innerHTML = clutter
 
-
+  var allh1 = document.querySelectorAll("#secondSection h1");
+  allh1.forEach(function (element) {
+    var h1text = element.textContent;
+    var clutter = "";
+    var splitedText = h1text.split("");
+    splitedText.forEach(function (elements) {
+      clutter += `<span>${elements}</span>`;
+    });
+    element.innerHTML = clutter;
+  });
+  gsap.to("#secondSection h1 span", {
+    color: "#f7f7ee",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#secondSection h1",
+      scroller: "main",
+      markers: true,
+      start: "top 50%",
+      end: "top -10%",
+      scrub: 2,
+    },
+  });
+}
 
 // function call ------------------------------------------------
-gsapWithLocomotivejs()
+gsapWithLocomotivejs();
+secondSectionAnimation();
