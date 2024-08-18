@@ -21,7 +21,7 @@ section {
   width: 100%;
 }
 
-#cursor {
+/* #cursor {
   height: 2.3rem;
   width: 2.3rem;
   position: fixed;
@@ -29,7 +29,13 @@ section {
   border: 0.15rem solid rgba(245, 245, 245, 0.661);
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
-  z-index: 99999;
+  z-index: 9999999 !important;
+} */
+.mousefollower{
+  border: .3rem;
+  background: white;
+  scale: 2;
+  mix-blend-mode: difference;
 }
 /* loader section --------------------------------------------------------------- */
 #loader {

@@ -39,13 +39,18 @@ function locomotiveWithGsap() {
 }
 // ---------------------------------------------------------------------------------
 function cursorAnimation() {
-  document.addEventListener("mousemove", function (detailes) {
-    gsap.to("#cursor", {
-      left: detailes.x,
-      top: detailes.y,
-    });
-  });
+  // document.addEventListener("mousemove", function (detailes) {
+  //   gsap.to("#cursor", {
+  //     left: detailes.x,
+  //     top: detailes.y,
+  //   });
+  // });
   Shery.makeMagnet("#navRight p");
+  Shery.mouseFollower({
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  })
 }
 // ---------------------------------------------------------------------------------
 function loaderAnimation() {
@@ -109,7 +114,8 @@ function loaderAnimation() {
     "-=1.2"
   );
 }
-function sheryAnimaiton() {
+// ---------------------------------------------------------------------------------
+function sheryImgAnimaiton() {
   Shery.imageEffect(".imgContainer", {
     style: 5,
     // debug: true,
@@ -120,6 +126,6 @@ function sheryAnimaiton() {
 
 // function calls -------------------------------------------------------------------
 locomotiveWithGsap();
-// cursorAnimation();
+cursorAnimation();
 loaderAnimation();
-sheryAnimaiton();
+sheryImgAnimaiton();
