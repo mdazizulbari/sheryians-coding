@@ -211,10 +211,54 @@ h5 {
 #projectSection {
   width: 100%;
   min-height: 100vh;
-  background: gray;
+  position: relative;
+  padding: 6rem 2rem;
   position: relative;
 }
-
+#projectSection .underline {
+  height: 0.2rem;
+  width: 100%;
+  background: white;
+  margin: 3rem 0;
+  margin-left: 28rem;
+}
+#projectSection h2 {
+  font-size: 7rem;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 28rem;
+}
+#projectSection h2::before {
+  content: "02";
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 100;
+  font-family: "silk serif";
+  top: 8%;
+  left: -12%;
+}
+#imgChildContainer{
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: red;
+}
+.imgContainer{
+  height: 33rem;
+  flex-shrink: 0;
+  width: 22rem;
+  position: relative;
+  overflow: hidden;
+}
+.imgContainer img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 /* about section ---------------------------------------------------     */
 #aboutSection {
   width: 100%;
@@ -385,4 +429,9 @@ footer h2::before {
 footer > h6 {
   font-size: 1rem;
   font-weight: 500;
+}
+/* shery js -------------------------------------------------------------- */
+._canvas_container{
+  z-index: 99999999 !important;
+pointer-events: none;
 }

@@ -37,7 +37,17 @@ function locomotiveWithGsap() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
-
+// ---------------------------------------------------------------------------------
+function cursorAnimation() {
+  document.addEventListener("mousemove", function (detailes) {
+    gsap.to("#cursor", {
+      left: detailes.x,
+      top: detailes.y,
+    });
+  });
+  Shery.makeMagnet("#navRight p");
+}
+// ---------------------------------------------------------------------------------
 function loaderAnimation() {
   // Sites code starts from here -------------------------------------------
   // loader section ------------------------------------------------------
@@ -81,29 +91,34 @@ function loaderAnimation() {
   tl.to("#loader", {
     display: "none",
   });
-  tl.from("nav",{
+  tl.from("nav", {
     opacity: 0,
-  })
-  tl.from("#heroText1 h1, #heroText2 h1, #heroText3 h2, #heroText3 h3, #heroText4 h1",{
-    y: 140,
-    stagger: .2,
-  })
-  tl.from('#heroText1, #videoSection',{
-    opacity: 0,
-  },"-=1.2")
-}
-
-function cursorAnimation() {
-  document.addEventListener("mousemove", function (detailes) {
-    gsap.to("#cursor", {
-      left: detailes.x,
-      top: detailes.y,
-    });
   });
-  Shery.makeMagnet("#navRight p");
+  tl.from(
+    "#heroText1 h1, #heroText2 h1, #heroText3 h2, #heroText3 h3, #heroText4 h1",
+    {
+      y: 140,
+      stagger: 0.2,
+    }
+  );
+  tl.from(
+    "#heroText1, #videoSection",
+    {
+      opacity: 0,
+    },
+    "-=1.2"
+  );
+}
+function sheryAnimaiton() {
+  Shery.imageEffect(".imgContainer", {
+    style: 5,
+    gooey: true,
+    config: {"a":{"value":2,"range":[0,30]},"b":{"value":0.75,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.6666749509158237},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.3,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0.53,"range":[0,10]},"metaball":{"value":0.46,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.32,"range":[0,2]},"noise_scale":{"value":5.34,"range":[0,100]}},
+  });
 }
 
 // function calls -------------------------------------------------------------------
 locomotiveWithGsap();
-cursorAnimation();
+// cursorAnimation();
 loaderAnimation();
+sheryAnimaiton();
