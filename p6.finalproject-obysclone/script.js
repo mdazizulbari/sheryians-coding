@@ -37,7 +37,7 @@ function locomotiveWithGsap() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
-// ---------------------------------------------------------------------------------
+
 function cursorAnimation() {
   // document.addEventListener("mousemove", function (detailes) {
   //   gsap.to("#cursor", {
@@ -127,7 +127,7 @@ function cursorAnimation() {
     });
   });
 }
-// ---------------------------------------------------------------------------------
+
 function loaderAnimation() {
   // Sites code starts from here -------------------------------------------
   // loader section ------------------------------------------------------
@@ -189,7 +189,7 @@ function loaderAnimation() {
     "-=1.2"
   );
 }
-// ---------------------------------------------------------------------------------
+
 function sheryImgAnimaiton() {
   Shery.imageEffect(".imgContainer", {
     style: 5,
@@ -228,6 +228,8 @@ function sheryImgAnimaiton() {
     },
   });
 }
+
+
 
 // function calls -------------------------------------------------------------------
 locomotiveWithGsap();
