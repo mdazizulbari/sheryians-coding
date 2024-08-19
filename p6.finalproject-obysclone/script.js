@@ -228,11 +228,56 @@ function sheryImgAnimaiton() {
     },
   });
 }
+function footerAnimation() {
+  var footerText = document.querySelector("footer h2").textContent;
+  var splitedText = footerText.split("");
+  var clutter = "";
+  splitedText.forEach(function (element) {
+    clutter += `<span>${element}</span>`;
+  });
+  document.querySelector("footer h2").innerHTML = clutter;
+// Initial setup for the animation
+var tl = gsap.timeline({ paused: true });
 
+// Animation to run on hover
+tl.to("footer h2 span", {
+  opacity: 0,
+  stagger: 0.05,
+  duration: 0.1,
+});
 
+tl.to("footer h2 span", {
+  opacity: 1,
+  fontFamily: "silk serif",
+  // fontWeight: 400,
+  color: "black",
+  stagger: 0.05,
+  duration: 0.1,
+  // css: {
+  //   "-webkit-text-stroke": "0.1rem white",
+  // },
+});
+
+// Add hover event listeners
+document.querySelector("footer h2").addEventListener("mouseenter", function() {
+  tl.play();
+});
+
+document.querySelector("footer h2").addEventListener("mouseleave", function() {
+  tl.reverse();
+});
+
+  
+}
 
 // function calls -------------------------------------------------------------------
-locomotiveWithGsap();
+
 cursorAnimation();
 loaderAnimation();
 sheryImgAnimaiton();
+footerAnimation()
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth > 600) {
+    locomotiveWithGsap();
+  }
+});
