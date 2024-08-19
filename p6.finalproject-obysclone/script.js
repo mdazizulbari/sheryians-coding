@@ -37,7 +37,6 @@ function locomotiveWithGsap() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
-
 function cursorAnimation() {
   // document.addEventListener("mousemove", function (detailes) {
   //   gsap.to("#cursor", {
@@ -127,7 +126,6 @@ function cursorAnimation() {
     });
   });
 }
-
 function loaderAnimation() {
   // Sites code starts from here -------------------------------------------
   // loader section ------------------------------------------------------
@@ -149,7 +147,7 @@ function loaderAnimation() {
         } else {
           h5timer.innerHTML = grow;
         }
-      }, 33);
+      }, 27);
     },
   });
   tl.to(".line h3", {
@@ -159,7 +157,14 @@ function loaderAnimation() {
   tl.to("#loader", {
     opacity: 0,
     duration: 0.2,
-    delay: 0,
+    delay: 2.5,
+    // the time that the site takes to load orginal 2.5
+  });
+  tl.to("#loader", {
+    display: "none",
+  });
+  tl.from("nav", {
+    opacity: 0,
   });
   tl.from("#hero", {
     delay: 0.2,
@@ -167,12 +172,6 @@ function loaderAnimation() {
     opacity: 0,
     duration: 0.5,
     ease: Power4,
-  });
-  tl.to("#loader", {
-    display: "none",
-  });
-  tl.from("nav", {
-    opacity: 0,
   });
   tl.from(
     "#heroText1 h1, #heroText2 h1, #heroText3 h2, #heroText3 h3, #heroText4 h1",
@@ -189,7 +188,6 @@ function loaderAnimation() {
     "-=1.2"
   );
 }
-
 function sheryImgAnimaiton() {
   Shery.imageEffect(".imgContainer", {
     style: 5,
