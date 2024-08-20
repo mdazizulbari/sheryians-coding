@@ -39,7 +39,7 @@ function App() {
     <>
     <div className="w-full h-screen bg-gray-200 flex gap-4 items-center justify-center">
       {data.map((item, index)=>(
-      <Card image={item.image} name={item.name} profession={item.profession} />
+      <Card values={item} />
       ))}
     </div>
     </>
