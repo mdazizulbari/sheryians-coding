@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Card() {
-    const eventAddtoCart = ()=>{alert("Added to cart");}
   const data = [
     {
       name: "Apple Store",
@@ -9,6 +8,7 @@ function Card() {
       image:
         "https://images.unsplash.com/photo-1602053540920-027b608ed4db?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       instock: false,
+      //   liked: false,
     },
     {
       name: "Amazon Basics",
@@ -17,6 +17,7 @@ function Card() {
       image:
         "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       instock: true,
+      //   liked: false,
     },
     {
       name: "Google Pixel 8 Pro",
@@ -24,11 +25,34 @@ function Card() {
       image:
         "https://fdn.gsmarena.com/imgroot/reviews/23/google-pixel-8-pro/lifestyle/-1024w2/gsmarena_010.jpg",
       instock: true,
+      //   liked: false,
     },
   ];
+  const eventAddtoCart = () => {
+    alert("Added to cart");
+  };
+  const [value, setValue] = useState({ name: "sma", isBanned: false });
   return (
     <>
-      <div className="w-full h-screen bg-gray-600 flex gap-10 items-center justify-center">
+      <div className="p-4">
+        <h5>Name: {value.name}</h5>
+        <h6>Banned: {value.isBanned.toString()}</h6>
+        <button
+          onClick={() => setValue({ ...value, isBanned: !value.isBanned })}
+          className={`px-3 py-1 ${
+            value.isBanned ? " bg-red-600" : "bg-blue-600"
+          } text-xs text-white rounded-full`}
+        >
+          Change
+        </button>
+        <button
+          className=" px-3 py-1 text-xs text-white rounded-full bg-blue-600 hover:bg-blue-800"
+          onClick={() => {setValue({...value, age: 19})}}
+        >
+          Add age in the object
+        </button>
+      </div>
+      <div className="w-full h-screen bg-gray-200 flex flex-wrap gap-10 items-center justify-center">
         {data.map((element, index) => (
           <div
             key={index}
@@ -50,9 +74,22 @@ function Card() {
               >
                 {element.instock ? "In Stock" : "Out of Stock"}
               </p>
-              <button onClick={eventAddtoCart}
-                className={`text-xs px-3 py-1 hover:bg-blue-700 ${element.instock ? "block" : "hidden"} bg-blue-600 w-full rounded-xl mt-3 text-white`}
-              >Add to Cart</button>
+              {/* <button
+                onClick={setValue({ ...value, liked: !value.liked })}
+                className={`text-xs px-3 py-1 hover:bg-blue-700 ${
+                  element.liked ? "bg-blue-800" : "bg-blue-600"
+                } bg-blue-600 w-full rounded-xl mt-3 text-white`}
+              >
+                Like the Product?
+              </button> */}
+              <button
+                onClick={eventAddtoCart}
+                className={`text-xs px-3 py-1 hover:bg-blue-700 ${
+                  element.instock ? "block" : "hidden"
+                } bg-blue-600 w-full rounded-xl mt-3 text-white`}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}
