@@ -32,25 +32,45 @@ function Card() {
     alert("Added to cart");
   };
   const [value, setValue] = useState({ name: "sma", isBanned: false });
+  const [value2, setValue2] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   return (
     <>
       <div className="p-4">
         <h5>Name: {value.name}</h5>
         <h6>Banned: {value.isBanned.toString()}</h6>
-        <button
-          onClick={() => setValue({ ...value, isBanned: !value.isBanned })}
-          className={`px-3 py-1 ${
-            value.isBanned ? " bg-red-600" : "bg-blue-600"
-          } text-xs text-white rounded-full`}
-        >
-          Change
-        </button>
-        <button
-          className=" px-3 py-1 text-xs text-white rounded-full bg-blue-600 hover:bg-blue-800"
-          onClick={() => {setValue({...value, age: 19})}}
-        >
-          Add age in the object
-        </button>
+        <div className="flex gap-5">
+          {value2.map((item) => (
+            <h1>{item}</h1>
+          ))}
+        </div>
+        <div className="flex gap-3 flex-wrap">
+          <button
+            onClick={() =>
+              setValue2(
+                value2.filter((item, index) => index != value2.length - 1)
+              )
+            }
+            className=" px-3 py-1 text-xs text-white rounded-full bg-blue-600 hover:bg-blue-800"
+          >
+            Remove Numbers
+          </button>
+          <button
+            onClick={() => setValue({ ...value, isBanned: !value.isBanned })}
+            className={`px-3 py-1 ${
+              value.isBanned ? " bg-red-600" : "bg-blue-600"
+            } text-xs text-white rounded-full`}
+          >
+            Change
+          </button>
+          <button
+            className=" px-3 py-1 text-xs text-white rounded-full bg-blue-600 hover:bg-blue-800"
+            onClick={() => {
+              setValue({ ...value, age: 19 });
+            }}
+          >
+            Add age in the object
+          </button>
+        </div>
       </div>
       <div className="w-full h-screen bg-gray-200 flex flex-wrap gap-10 items-center justify-center">
         {data.map((element, index) => (
