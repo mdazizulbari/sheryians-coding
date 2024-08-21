@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useEffect } from "react";
 import { useState } from "react";
 
 const Show = () => {
@@ -17,15 +18,18 @@ const Show = () => {
 
   console.log(products);
 
+  useEffect(()=>{
+    getproducts()
+  },[])
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <button
+      {/* <button
         onClick={getproducts}
         className="px-4 py-2 mb-2 rounded-full bg-blue-600 text-white"
       >
         Get Products
-      </button>
+      </button> */}
       <ul className="w-full flex flex-col items-center">
         {products.length > 0 ? (
           products.map((product) => (
