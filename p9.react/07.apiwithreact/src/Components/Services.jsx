@@ -1,11 +1,23 @@
 import { useState } from "react";
+import axios from "../Utilities/Axios";
 import { useEffect } from "react";
 
 const Services = () => {
   const [first, setFirst] = useState("this is normal data");
   const [second, setSecond] = useState("this is very large data");
 
+
+  const getusers = () => {
+    axios
+      .get("/users")
+      .then((users) => {
+        console.log(users);
+      })
+      .catch((error) => console.log(error));
+  };
+
   useEffect(() => {
+    getusers()
     console.log("Services component is created");
     return () => {
       console.log("Services component is deleted");
