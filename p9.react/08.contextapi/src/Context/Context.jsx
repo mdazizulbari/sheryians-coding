@@ -8,7 +8,6 @@ const Context = (props) => {
     { id: 1, name: "Jane", city: "UK" },
     { id: 2, name: "Sam", city: "Australia" },
   ]);
-  console.log(props);
   return (
     <UserContext.Provider value={{ users, setUsers }}>
       {props.children}
