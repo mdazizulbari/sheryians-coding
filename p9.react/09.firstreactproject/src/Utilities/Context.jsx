@@ -14,6 +14,7 @@ const Context = (props) => {
       console.log(error);
     }
   };
+  console.log(products)
 
   useEffect(() => {
     getProducts();

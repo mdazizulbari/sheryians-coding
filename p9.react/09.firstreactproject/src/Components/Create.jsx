@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ProductContext } from "../Utilities/Context";
+import { nanoid } from "nanoid";
 
 const Create = () => {
+  const [products, setproducts] = useContext(ProductContext);
   const [title, settitle] = useState("");
   const [image, setimage] = useState("");
   const [category, setcategory] = useState("");
@@ -9,13 +12,21 @@ const Create = () => {
 
   const addProductHandeler = (element) => {
     element.preventDefault();
+
+    if (!title || !image || !category || !price || !description) {
+      alert("Please fill out all the fields");
+      return;
+    }
+
     const product = {
+      id: nanoid(),
       title,
       image,
       category,
       price,
       description,
     };
+    setproducts([...products, product]);
     console.log(product);
   };
 
