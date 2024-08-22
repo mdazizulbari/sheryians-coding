@@ -1,8 +1,14 @@
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../Utilities/Context";
+import { useContext } from "react";
+import Loading from "./Loading";
 
 const Home = () => {
-  return (
+  const [products] = useContext(ProductContext);
+  console.log(products);
+
+  return products ? (
     <>
       <Nav />
       <section className="w-10/12 p-10 flex flex-wrap overflow-x-hidden overflow-y-auto">
@@ -21,6 +27,8 @@ const Home = () => {
         </Link>
       </section>
     </>
+  ) : (
+    <Loading />
   );
 };
 export default Home;
