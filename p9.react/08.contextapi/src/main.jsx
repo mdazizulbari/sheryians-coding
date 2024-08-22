@@ -7,7 +7,6 @@ import Context from "./Context/Context.jsx";
 
 createRoot(document.getElementById("root")).render(
   <Context>
-    <App />
     {/* <StrictMode> */}
     <BrowserRouter>
       <App />
