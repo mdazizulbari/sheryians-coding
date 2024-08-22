@@ -18,7 +18,7 @@ const Nav = () => {
       Math.random() * 255
     ).toFixed()},${(Math.random() * 255).toFixed()},0.4)`;
   };
-  console.log(color());
+  // console.log(color());
 
   return (
     <nav className="w-2/12 h-full p-5 bg-gray-50 flex flex-col items-center">
