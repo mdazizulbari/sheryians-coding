@@ -24,7 +24,7 @@ const Home = () => {
               }}
               className="w-full h-4/5 mb-3 bg-contain bg-no-repeat bg-center hover:scale-110"
             ></div>
-            <h3 className="hover:text-blue-300">{product.title}</h3>
+            <h3 className="hover:text-blue-300 text-center">{product.title}</h3>
           </Link>
         ))}
       </section>
