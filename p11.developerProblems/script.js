@@ -30,3 +30,22 @@ const getNewUser = () => {
         </div>`;
     });
 };
+
+// Working with Local Storage
+const block = document.getElementById("block");
+const unBlock = document.getElementById("unBlock");
+const blockStatus = document.querySelector("#blockStatus span");
+
+block.addEventListener("click", () => {
+  localStorage.setItem("block", true);
+  blockStatusFunction();
+});
+unBlock.addEventListener("click", () => {
+  localStorage.setItem("block", false);
+  blockStatusFunction();
+});
+const blockStatusFunction = () => {
+  blockStatus.textContent =
+    localStorage.getItem("block") === "false" ? "Unblocked" : "Blocked";
+};
+blockStatusFunction();
