@@ -55,3 +55,13 @@ const blockScroll = document.getElementById('blockScroll')
 blockScroll.addEventListener("click", () => {
 document.body.classList.toggle("overflow-hidden")
 })
+
+// Making a Tooltip
+const tooltip = document.getElementById('tooltip');
+const tooltipButton = document.querySelector("#tooltipContainer button");
+tooltipButton.addEventListener('mouseenter', () => {
+  tooltip.classList.remove('hidden');
+});
+tooltipButton.addEventListener('mouseleave', () => {
+  tooltip.classList.add('hidden');
+});
