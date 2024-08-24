@@ -49,3 +49,9 @@ const blockStatusFunction = () => {
     localStorage.getItem("block") === "false" ? "Unblocked" : "Blocked";
 };
 blockStatusFunction();
+
+// blocking Scroll
+const blockScroll = document.getElementById('blockScroll')
+blockScroll.addEventListener("click", () => {
+document.body.classList.toggle("overflow-hidden")
+})
