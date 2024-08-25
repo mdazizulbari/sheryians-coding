@@ -1,35 +1,35 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment, incrementAsync, incrementByAmount } from "./store/reducers/counterSlice";
+import { userdelete } from "./store/reducers/userReducer";
 
 const App = () => {
-  const { value } = useSelector((state) => state.counter);
-  const dispatch = useDispatch();
+  const { users } = useSelector((state) => state.userReducer);
+const dispatch = useDispatch()
+
+  const deleteHandler = (index) =>{
+    console.log(index)
+    dispatch(userdelete(index))
+  }
 
   return (
-    <div className=" container m-auto mt-5 p-10 bg-red-100">
-      <h1 className="text-center text-3xl font-bold text-red-900">
-        Counter: {value}
-      </h1>
-      <div className="text-center">
-        <button
-          onClick={() => dispatch(increment())}
-          className="px-5 py-2 runded text-red-900 border border-red-900 bg-transparent"
-        >
-          Increment
-        </button>
-        <button
-          onClick={() => dispatch(decrement())}
-          className="px-5 py-2 mx-2 runded text-red-900 border border-red-900 bg-transparent"
-        >
-          Decrement
-        </button>
-        <button
-          onClick={() => dispatch(incrementAsync(5))}
-          className="px-5 py-2 runded text-red-900 border border-red-900 bg-transparent"
-        >
-          Increment by 5
-        </button>
-      </div>
+    <div className="container m-auto p-10 mt-5 bg-red-100">
+      <h1 className="text-2xl font-bold text-red-900">User List</h1>
+      <ul>
+        {users.map((user) => {
+          return (
+            <li key={user.id}>
+              <h1>
+                {user.name}{" "}
+                <span
+                  onClick={() => deleteHandler(user.index)}
+                  className="text-red-500 font-black cursor-pointer"
+                >
+                  X
+                </span>
+              </h1>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
