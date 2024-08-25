@@ -1,7 +1,8 @@
-import { useDispatch, useSelector } from "react-redux";
-import { userdelete } from "./store/reducers/userReducer";
 
-const App = () => {
+import { useDispatch, useSelector } from "react-redux";
+import { userdelete } from "../store/reducers/userReducer";
+
+const Users = () => {
   const { users } = useSelector((state) => state.userReducer);
 const dispatch = useDispatch()
 
@@ -33,4 +34,4 @@ const dispatch = useDispatch()
     </div>
   );
 };
-export default App;
+export default Users;
