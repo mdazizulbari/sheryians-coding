@@ -27,3 +27,17 @@ rename("newFile.txt", "renamedFile.txt", (err) => {
   if (err) throw err;
   console.log("Rename complete!");
 });
+
+// deleting file
+import { unlink } from "node:fs";
+unlink("renamedFile.txt", (err) => {
+  if (err) throw err;
+  console.log("File deleted successfully!");
+});
+
+// creating folder
+import { mkdir } from "node:fs";
+mkdir("newFolder", (err)=>{
+    if (err) throw err;
+    console.log("Folder created successfully!");
+})
