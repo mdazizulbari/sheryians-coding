@@ -104,7 +104,7 @@ function reviewsAnnimation() {
       trigger: ".reviews",
       start: "top 60%",
       end: "bottom 90%",
-      // markers: true,
+      markers: true,
       scrub: 0.2,
     },
     opacity: 1,
