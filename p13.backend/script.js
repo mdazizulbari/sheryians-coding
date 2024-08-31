@@ -37,7 +37,14 @@ unlink("renamedFile.txt", (err) => {
 
 // creating folder
 import { mkdir } from "node:fs";
-mkdir("newFolder", (err)=>{
-    if (err) throw err;
-    console.log("Folder created successfully!");
-})
+// mkdir("newFolder", (err)=>{
+//     if (err) throw err;
+//     console.log("Folder created successfully!");
+// })
+
+// reading folder
+import { readdir } from "node:fs";
+readdir("newFolder", {withFileTypes: true}, (err, files) => {
+  if (err) throw err;
+  console.log(files);
+});
