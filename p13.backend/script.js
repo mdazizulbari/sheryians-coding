@@ -48,3 +48,10 @@ readdir("newFolder", {withFileTypes: true}, (err, files) => {
   if (err) throw err;
   console.log(files);
 });
+
+// deleting folder
+import { rm } from "node:fs";
+rm("newFolder",{recursive: true}, (err)=>{
+    if (err) throw err;
+    console.log("Folder deleted successfully!");
+})
