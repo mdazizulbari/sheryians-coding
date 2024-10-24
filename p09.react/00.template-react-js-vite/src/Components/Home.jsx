@@ -1,4 +1,5 @@
 import Loading from "./Loading";
+import Footer from "./partials/Footer";
 import Nav from "./partials/Nav";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
   return Home ? (
     <div>
       <Nav />
+      <Footer />
     </div>
   ) : (
     <Loading />
