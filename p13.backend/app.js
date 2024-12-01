@@ -24,15 +24,15 @@ import { appendFile } from "node:fs";
 // renaming file
 import { rename } from "node:fs";
 // rename("newFile.txt", "renamedFile.txt", (err) => {
-  // if (err) throw err;
-  // console.log("Rename complete!");
+// if (err) throw err;
+// console.log("Rename complete!");
 // });
 
 // deleting file
 import { unlink } from "node:fs";
 // unlink("renamedFile.txt", (err) => {
-  // if (err) throw err;
-  // console.log("File deleted successfully!");
+// if (err) throw err;
+// console.log("File deleted successfully!");
 // });
 
 // creating folder
@@ -63,3 +63,14 @@ import fs from "node:fs";
 // synchronuss api
 let data = fs.readFileSync("renamedFile.txt");
 console.log("read");
+
+// importing all the http modules
+import http from "node:http";
+
+// running http server
+var server = http.createServer(function (req, res) {
+  res.end("server started right now");
+});
+server.listen(3000);
+
+
