@@ -68,9 +68,21 @@ console.log("read");
 import http from "node:http";
 
 // running http server
-var server = http.createServer(function (req, res) {
-  res.end("server started right now");
-});
-server.listen(3000);
+// var server = http.createServer(function (req, res) {
+//   res.end("server started right now");
+// });
+// server.listen(3000);
 
-
+// learing about rutes
+const server = http.createServer(function(req, res){
+  if(req.url === '/'){
+    res.end("server started")
+  }
+  else if (req.url === "/profile"){
+    res.end("profile page")
+  }
+  else{
+    res.end("page not found")
+  }
+})
+server.listen(3000)
